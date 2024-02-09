@@ -16,6 +16,9 @@ class Rectangle(MyShape):
         return (f"Rectangle - Color: {self.color}, Is Filled: {self.is_filled}, "
                 f"Top Left: ({self.x_top_left}, {self.y_top_left}), "
                 f"Length: {self.length}, Width: {self.width}")
+        
+    def getPerim(self):
+        return 2 * (self.length + self.width)
 
 class Circle(MyShape):
     def __init__(self, color="Yellow", is_filled=False, x_center=0, y_center=0, radius=1):
@@ -31,11 +34,12 @@ class Circle(MyShape):
         return (f"Circle - Color: {self.color}, Is Filled: {self.is_filled}, "
                 f"Center: ({self.x_center}, {self.y_center}), Radius: {self.radius}")
 
-"""
+'''
 rectangle = Rectangle(color="blue", length=5, width=3)
 print(rectangle)
 print("Area:", rectangle.getArea())
-"""
+print("Perimeter:", rectangle.getPerim())
+'''
 
 '''
 circle = Circle(color="red", radius=2)
