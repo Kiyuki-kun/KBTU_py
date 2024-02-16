@@ -5,7 +5,8 @@ with open('C:\D_Files\KBTU_coding\Python\PP2_2024-Serikbai-\Lab 4\JSON\sample-da
 
 interfaces = data['imdata']
 
-print("Interface Status" + "-" * 80)
+print("Interface Status")
+print("================================================================================")
 print("DN                                                 Description           Speed    MTU   ")
 print("-------------------------------------------------- --------------------  ------  ------")
 
