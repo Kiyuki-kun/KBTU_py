@@ -29,13 +29,13 @@ def draw_clock():
     window.blit(text_surface, (150, 20))
 
     minute_angle = (minute * 360) / 60 - 90  
-    minute_hand = pygame.transform.rotozoom(minute_hand_image, -minute_angle, 1.0)
+    minute_hand = pygame.transform.rotate(minute_hand_image, -minute_angle)
     minute_hand_rect = minute_hand.get_rect()
     minute_hand_rect.center = (465, 465)
     window.blit(minute_hand, minute_hand_rect)
 
     second_angle = (second * 360) / 60 - 90
-    second_hand = pygame.transform.rotozoom(second_hand_image, -second_angle, 1.0)
+    second_hand = pygame.transform.rotate(second_hand_image, -second_angle)
     second_hand_rect = second_hand.get_rect()
     second_hand_rect.center = (465, 465)
     window.blit(second_hand, second_hand_rect)
