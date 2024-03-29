@@ -33,6 +33,12 @@ while True:
             if event.key == pygame.K_RIGHT:
                 ball_vel[0] = MOVE_STEP
 
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                ball_vel[1] = 0
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                ball_vel[0] = 0
+    
     if ball_vel[0] != 0:
         if ball_pos[0] + ball_vel[0] + BALL_RADIUS > WIDTH or ball_pos[0] + ball_vel[0] - BALL_RADIUS < 0:
             ball_pos[0] += ball_vel[0]
